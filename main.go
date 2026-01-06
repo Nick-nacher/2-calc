@@ -117,7 +117,7 @@ func calcMed(slice []int) int {
 	if len(slice)%2 == 0 {
 		sum = slice[len(slice)/2]
 	} else {
-		sum = slice[len(slice)/2+1]
+		sum = (slice[len(slice)/2-1] + slice[len(slice)/2]) / 2
 	}
 	return sum
 }
