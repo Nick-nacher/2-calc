@@ -50,13 +50,13 @@ OPER:
 
 func regx(str string) ([]int, error) {
 
-	fmt.Println("Test string", str)
+	//fmt.Println("Test string", str)
 
 	re := regexp.MustCompile("[0-9]+")
 
 	reStr := re.FindAllString(str, -1)
-	fmt.Println(reStr)
-	fmt.Println(len(reStr), cap(reStr), reStr[0])
+	//fmt.Println(reStr)
+	//fmt.Println(len(reStr), cap(reStr), reStr[0])
 	slice := make([]int, 0)
 	var err error
 	for _, v := range reStr {
@@ -112,7 +112,7 @@ func calcSum(slice []int) int {
 
 func calcMed(slice []int) int {
 	sort.Slice(slice, func(i, j int) bool { return slice[i] < slice[j] })
-	fmt.Println(slice)
+	//fmt.Println(slice)
 	sum := 0
 	if len(slice)%2 == 0 {
 		sum = slice[len(slice)/2]
